@@ -1,95 +1,69 @@
-# Projeto de Infraestrutura como Código (IaC) com Terraform e AWS
+# Implantando uma Aplicação Containerizada na AWS com Terraform
 
-## Descrição do Projeto
+Este projeto demonstra como implantar uma aplicação containerizada na AWS usando Terraform, como parte de um estudo em Infraestrutura como Código (IaC) e computação em nuvem.
 
-Este projeto demonstra a implementação de Infraestrutura como Código (IaC) utilizando Terraform para provisionar e gerenciar recursos na Amazon Web Services (AWS). O foco principal é a criação de uma infraestrutura escalável e gerenciável para hospedar aplicações containerizadas usando Amazon ECS (Elastic Container Service).
+## Sobre o Projeto
 
-## Tecnologias Utilizadas
+Este projeto foi desenvolvido como parte da pós-graduação em Engenharia de Dados na Data Science Academy. Ele representa a aplicação prática dos conhecimentos adquiridos em Infraestrutura como Código (IaC) e computação em nuvem.
 
-- Terraform
-- AWS (Amazon Web Services)
-- Docker
-- Amazon ECS (Elastic Container Service)
-- Amazon VPC (Virtual Private Cloud)
-- Application Load Balancer (ALB)
-- CloudWatch
+## Principais Características
 
-## Estrutura do Projeto
+- Configuração completa de infraestrutura AWS
+- Implantação de cluster ECS Fargate
+- Rede segura com VPC personalizada
+- Aplicação prática de princípios DevOps
 
-O projeto está organizado da seguinte forma:
+## Pré-requisitos
 
-- `Dockerfile`: Define o ambiente de desenvolvimento com Terraform e AWS CLI.
-- `main.tf`: Arquivo principal do Terraform que define os recursos AWS.
-- `variables.tf`: Declaração de variáveis utilizadas no projeto.
-- `terraform.tfvars`: Valores específicos para as variáveis declaradas.
-- `outputs.tf`: Define as saídas após a aplicação do Terraform.
-- `providers.tf`: Configuração do provider AWS.
-- `security_group.tf`: Define os grupos de segurança para ECS e ALB.
-- `vpc.tf`: Configuração da VPC utilizando um módulo Terraform.
-- `vars.env`: Variáveis de ambiente para os containers ECS.
-
-## Funcionalidades Principais
-
-1. **Configuração de VPC**: Cria uma VPC personalizada com subnets públicas e privadas.
-2. **Cluster ECS**: Provisiona um cluster ECS para hospedar containers.
-3. **Application Load Balancer**: Configura um ALB para distribuir tráfego para os containers.
-4. **Grupos de Segurança**: Define regras de segurança para controlar o tráfego de rede.
-5. **CloudWatch Logs**: Configura logs para monitoramento dos containers.
+- Conta AWS
+- Docker instalado
+- Terraform instalado
+- AWS CLI configurado
 
 ## Como Usar
 
-1. Clone este repositório:
-   ```
-   git clone [URL_DO_SEU_REPOSITÓRIO]
-   ```
+1. Clone o repositório
+2. Configure as credenciais AWS
+3. Ajuste as variáveis no arquivo `terraform.tfvars`
+4. Execute `terraform init`
+5. Execute `terraform plan`
+6. Execute `terraform apply`
 
-2. Navegue até o diretório do projeto:
-   ```
-   cd [NOME_DO_DIRETÓRIO]
-   ```
+Para instruções detalhadas, consulte o [tutorial completo](https://www.linkedin.com/pulse/tutorial-completo-implantando-uma-aplica%25C3%25A7%25C3%25A3o-na-aws-com-carlos-costa-lawtf).
 
-3. Construa a imagem Docker para o ambiente de desenvolvimento:
-   ```
-   docker build -t iac-dev-image:v1 .
-   ```
+## Componentes Principais
 
-4. Execute o container Docker:
-   ```
-   docker run -dit --name iac-dev -v ./IaC:/iac iac-dev-image:v1 /bin/bash
-   ```
-
-5. Configure suas credenciais AWS (substitua com suas próprias credenciais):
-   ```
-   docker exec iac-dev aws configure
-   ```
-
-6. Inicialize o Terraform:
-   ```
-   docker exec iac-dev terraform init
-   ```
-
-7. Aplique a configuração Terraform:
-   ```
-   docker exec iac-dev terraform apply
-   ```
+- VPC e Networking
+- Grupos de Segurança
+- ECS e Fargate
+- Application Load Balancer
 
 ## Considerações de Segurança
 
-- Este projeto utiliza variáveis de ambiente para configurações sensíveis.
-- Certifique-se de nunca commitar credenciais ou informações sensíveis diretamente no código.
-- Utilize o AWS IAM para gerenciar permissões e acessos.
+- Grupos de segurança restritos
+- Credenciais AWS gerenciadas fora do código
+- Estado do Terraform armazenado de forma segura no S3
+- VPC isolada
 
-## Contribuições
+## Aprendizados e Desenvolvimento
 
-Contribuições para melhorar este projeto são bem-vindas. Por favor, sinta-se à vontade para fazer um fork do repositório e submeter pull requests.
+Este projeto reflete a jornada de aprendizado na pós-graduação em Engenharia de Dados da Data Science Academy, aplicando princípios de arquitetura em nuvem e melhores práticas de DevOps.
 
-## Licença
+## Próximos Passos
 
-[Insira aqui a licença escolhida para o seu projeto]
+- Implementar um pipeline de CI/CD
+- Explorar opções avançadas de monitoramento com CloudWatch
+- Adicionar mais serviços AWS à infraestrutura
 
-## Contato
+## Referências
 
-[Seu Nome] - [Seu Email]
+- [Tutorial Completo no LinkedIn](https://www.linkedin.com/pulse/tutorial-completo-implantando-uma-aplica%25C3%25A7%25C3%25A3o-na-aws-com-carlos-costa-lawtf)
+- [Postagem Original no LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7240432460927320064/)
+- [Amazon ECS Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
+- [Terraform Documentation](https://www.terraform.io/docs/index.html)
+- [Data Science Academy - Pós-Graduação em Engenharia de Dados](https://www.datascienceacademy.com.br)
+- [Docker - Get Started](https://www.docker.com/get-started)
 
-Link do Projeto: [URL_DO_SEU_REPOSITÓRIO_GITHUB]# terraform-aws-ecs-infra
-# terraform-aws-ecs-infra
+## Autor
+
+Carlos Costa - [Perfil LinkedIn](https://www.linkedin.com/in/seu-perfil/)
