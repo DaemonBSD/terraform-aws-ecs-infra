@@ -1,0 +1,14 @@
+{
+    "containerDefinitions": [
+      {
+        "name": "my-ecs-project-container",
+        "image": "nginx:latest",
+        "environment": [
+          {
+            "name": "APP_ENV",
+            "value": "production"
+          }
+        ]
+      }
+    ]
+  }
