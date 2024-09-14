@@ -66,4 +66,4 @@ Este projeto reflete a jornada de aprendizado na pós-graduação em Engenharia 
 
 ## Autor
 
-Carlos Costa - [Perfil LinkedIn](https://www.linkedin.com/in/seu-perfil/)
+Carlos Costa - [Perfil LinkedIn](https://www.linkedin.com/in/carlos-costa-0b548675/)
